@@ -101,7 +101,7 @@ does. Think of it like a cheat-sheet.
 The source of truth is the fasm manual and ultimately the datasheets, but I
 wouldn't wish reading the datasheets on my worst enemy.
 
-```x86asm
+```asm
 ;; Moving/setting data
 
 mov dest, src
@@ -443,7 +443,7 @@ source index (SI) as 0, then moves some memory to that location. Since 0xB800 is
 the start of VGA memory, the effect of this program is to draw `!` all over the
 screen.
 
-```x86asm
+```asm
 ;; MS-DOS COM file
 org 100h
 
@@ -470,7 +470,7 @@ start:
 As well as moving to and from segmented memory you can far jump, far call, and
 far return:
 
-```x86asm
+```asm
 ;; Near versions
     jmp 100h         ; direct near jump
     jmp ax           ; indirect near jump
@@ -509,7 +509,7 @@ memory.
 
 Here's Hello World as an MZ executable:
 
-```x86asm
+```asm
 format MZ
 entry .code:start
 segment .code
@@ -528,7 +528,7 @@ segment .data
 
 An example with far calls, from the fasm sources:
 
-```x86asm
+```asm
 ; fasm example of writing multi-segment EXE program
 
 format MZ
@@ -634,7 +634,7 @@ would:
 
 In asm:
 
-```x86asm
+```asm
     ;; CRT controller index port
     mov dx, 0x3D4
     ;; Cursor location low byte
@@ -664,7 +664,7 @@ In asm:
 
 Another cheatsheet, this time for the pre-processor etc. in fasm.
 
-```x86asm
+```asm
 ;; macro - define macro
 macro name arg1 arg2 ... { body }
 ; rtfm on this one - lots of cool shit!
