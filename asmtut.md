@@ -560,6 +560,9 @@ segment extra
     retf
 ```
 
+mz-format.asm is a more verbose example, with some useful output, from this
+repository.
+
 ## VGA Shit
 
 You could probably use CGA and EGA in a similar way, but I don't care.
